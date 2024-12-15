@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEMOOT - Penyelenggara Registration and Login</title>
+    <title>SEMOOT - Login Penyelenggara</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -12,7 +12,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-gray-100">
     <header class="bg-blue-600 text-white py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="text-3xl font-bold">SEMOOT</a>
@@ -22,76 +22,39 @@
                     <li><a href="#" class="hover:text-blue-200">Seminars</a></li>
                     <li><a href="#" class="hover:text-blue-200">Bootcamps</a></li>
                     <li><a href="#" class="hover:text-blue-200">About</a></li>
-                    <li><a href="#" class="hover:text-blue-200">Akun</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="flex-grow container mx-auto px-4 py-8">
-        <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold mb-6 text-center">Penyelenggara Portal</h2>
-                <div class="flex justify-center mb-6">
-                    <button id="loginBtn" class="px-4 py-2 font-semibold text-sm bg-blue-500 text-white rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400">Login</button>
-                    <button id="registerBtn" class="px-4 py-2 font-semibold text-sm bg-gray-200 text-gray-700 rounded-r-md focus:outline-none focus:ring-2 focus:ring-blue-400">Register</button>
-                </div>
-                
-                <form id="registerForm" class="space-y-4 hidden">
-                    <div>
-                        <label for="regName" class="block text-sm font-medium text-gray-700">Full Name</label>
-                        <input type="text" id="regName" name="regName" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div>
-                        <label for="regEmail" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" id="regEmail" name="regEmail" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div>
-                        <label for="regPassword" class="block text-sm font-medium text-gray-700">Password</label>
-                        <input type="password" id="regPassword" name="regPassword" required minlength="8" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                        <p class="mt-1 text-xs text-gray-500">Password must be at least 8 characters long</p>
-                    </div>
-                    <div>
-                        <label for="regConfirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-                        <input type="password" id="regConfirmPassword" name="regConfirmPassword" required minlength="8" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            Register
-                        </button>
-                    </div>
-                </form>
-
-                <form id="loginForm" class="space-y-4">
-                    <div>
-                        <label for="loginEmail" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" id="loginEmail" name="loginEmail" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div>
-                        <label for="loginPassword" class="block text-sm font-medium text-gray-700">Password</label>
-                        <input type="password" id="loginPassword" name="loginPassword" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                            <label for="remember_me" class="ml-2 block text-sm text-gray-900">
-                                Remember me
-                            </label>
-                        </div>
-                        <div class="text-sm">
-                            <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
-                                Forgot your password?
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            Log in
-                        </button>
-                    </div>
-                </form>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Login Penyelenggara</h1>
+        <form class="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" required>
             </div>
-        </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" required>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Login
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800" href="#">
+                    Lupa Password?
+                </a>
+            </div>
+        </form>
+        <p class="text-center text-gray-600 text-sm">
+            Belum menjadi penyelenggara? <a href="application.html" class="text-blue-600 hover:text-blue-800">Daftar di sini</a>
+        </p>
     </main>
 
     <footer class="bg-gray-800 text-white py-8">
@@ -137,45 +100,16 @@
                 </div>
             </div>
             <div class="mt-8 text-center text-sm">
-                <p>&copy; 2023 SEMOOT. All rights reserved.</p>
+                &copy; 2024 SEMOOT. All rights reserved.
             </div>
         </div>
     </footer>
 
     <script>
-        const registerBtn = document.getElementById('registerBtn');
-        const loginBtn = document.getElementById('loginBtn');
-        const registerForm = document.getElementById('registerForm');
-        const loginForm = document.getElementById('loginForm');
-
-        registerBtn.addEventListener('click', () => {
-            registerBtn.classList.add('bg-blue-500', 'text-white');
-            registerBtn.classList.remove('bg-gray-200', 'text-gray-700');
-            loginBtn.classList.add('bg-gray-200', 'text-gray-700');
-            loginBtn.classList.remove('bg-blue-500', 'text-white');
-            registerForm.classList.remove('hidden');
-            loginForm.classList.add('hidden');
-        });
-
-        loginBtn.addEventListener('click', () => {
-            loginBtn.classList.add('bg-blue-500', 'text-white');
-            loginBtn.classList.remove('bg-gray-200', 'text-gray-700');
-            registerBtn.classList.add('bg-gray-200', 'text-gray-700');
-            registerBtn.classList.remove('bg-blue-500', 'text-white');
-            loginForm.classList.remove('hidden');
-            registerForm.classList.add('hidden');
-        });
-
-        registerForm.addEventListener('submit', (e) => {
+        document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Add registration logic here
-            console.log('Registration form submitted');
-        });
-
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Add login logic here
-            console.log('Login form submitted');
+            // Here you would typically send the login credentials to your server for authentication
+            alert('Login functionality would be implemented on the server-side.');
         });
     </script>
 </body>
