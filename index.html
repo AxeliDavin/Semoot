@@ -14,15 +14,32 @@
 </head>
 <body class="bg-gray-100">
     <header class="bg-blue-600 text-white py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-3xl font-bold">SEMOOT</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-blue-200">Beranda</a></li>
-                    <li><a href="#" class="hover:text-blue-200">Seminars</a></li>
-                    <li><a href="#" class="hover:text-blue-200">Bootcamps</a></li>
-                    <li><a href="#" class="hover:text-blue-200">Tentang</a></li>
-                    <li><a href="account.html" class="hover:text-blue-200">Akun</a></li>
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold">SEMOOT</h1>
+                <input type="checkbox" id="menu-toggle" class="hidden">
+                <label for="menu-toggle" class="block md:hidden cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </label>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="hover:text-blue-200">Beranda</a></li>
+                        <li><a href="#" class="hover:text-blue-200">Seminars</a></li>
+                        <li><a href="#" class="hover:text-blue-200">Bootcamps</a></li>
+                        <li><a href="#" class="hover:text-blue-200">Tentang</a></li>
+                        <li><a href="account.html" class="hover:text-blue-200">Akun</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="md:hidden">
+                <ul class="hidden mt-4 space-y-2" id="mobile-menu">
+                    <li><a href="#" class="block hover:text-blue-200">Beranda</a></li>
+                    <li><a href="#" class="block hover:text-blue-200">Seminars</a></li>
+                    <li><a href="#" class="block hover:text-blue-200">Bootcamps</a></li>
+                    <li><a href="#" class="block hover:text-blue-200">Tentang</a></li>
+                    <li><a href="account.html" class="block hover:text-blue-200">Akun</a></li>
                 </ul>
             </nav>
         </div>
@@ -164,5 +181,10 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('change', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
